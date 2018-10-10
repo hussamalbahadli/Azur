@@ -1,8 +1,0 @@
-{
-    "cpu": {
-        "name": "Arduino/Genuino Uno",
-        "com_name": "/dev/ttyUSB0",
-        "fqbn": "arduino:avr:uno"
-    },
-    "secrets": []
-}
