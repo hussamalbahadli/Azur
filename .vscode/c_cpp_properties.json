@@ -4,6 +4,8 @@
         {
             "name": "Linux",
             "includePath": [
+                "/home/hussam/Documents/PlatformIO/Projects/Azur/include",
+                "/home/hussam/Documents/PlatformIO/Projects/Azur/src",
                 "/home/hussam/.platformio/packages/framework-arduinoavr/cores/arduino",
                 "/home/hussam/.platformio/packages/framework-arduinoavr/variants/standard",
                 "/home/hussam/Documents/PlatformIO/Projects/Azur/lib/MFRC522/src",
@@ -40,6 +42,8 @@
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": "${workspaceRoot}/.vscode/.browse.c_cpp.db",
                 "path": [
+                    "/home/hussam/Documents/PlatformIO/Projects/Azur/include",
+                    "/home/hussam/Documents/PlatformIO/Projects/Azur/src",
                     "/home/hussam/.platformio/packages/framework-arduinoavr/cores/arduino",
                     "/home/hussam/.platformio/packages/framework-arduinoavr/variants/standard",
                     "/home/hussam/Documents/PlatformIO/Projects/Azur/lib/MFRC522/src",
