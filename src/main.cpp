@@ -80,19 +80,20 @@ void loop()
       goto cont; //شغل ضوء احمر اذا لم تعثر على شيء 
     }
   }
-  if (NumbCard[j] == 1 && statu[s] == 0)
+  if (NumbCard[j] == 1 )
   {
-    //statu[s] = 1; // عطلت هذا الامر لكي يسمح لكل طالب بالدخول والخروج اكثر من مرة في الصف 
+    NumbCard[j] = 0; //لجعل الطالب يسجل دخول وخروج اكثر من مرة 
     Serial.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
     Serial.print(ID);
     Serial.print(",");
     Serial.print("");
     Serial.print(",");
     Serial.println("TIME");
+    
   }
   else if (NumbCard[j] == 0)
   {
-   // NumbCard[j] = 1; // عطلت هذا الامر لكي يسمح لكل طالب بالدخول والخروج اكثر من مرة في الصف 
+    NumbCard[j] = 1; // لجعل الطالب يسجل دخول وخروج اكثر من مرة 
     Serial.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
     Serial.print(ID);
     Serial.print(",");
