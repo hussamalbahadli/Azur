@@ -8,4 +8,11 @@ write inside and outside student from the class in Microsoft excel using Arduino
 
 ![alt text](https://github.com/hussamalbahadli/Azur/blob/master/assets/Screenshot_2.png)
 
+صورة المتحكم والبطاقة 
+
+![alt text](https://github.com/hussamalbahadli/Azur/blob/master/assets/photo_2018-10-28_15-38-22.jpg)
+
+![alt text](https://github.com/hussamalbahadli/Azur/blob/master/assets/photo_2018-10-28_15-38-23.jpg)
+ 
+
 
