@@ -1,8 +1,3 @@
-# Azur
-write inside and outside student from the class in Microsoft excel using Arduino and RFID reader   
---------------------------------------------------------------
-#ازور
-تسجيل دخول وخروج الطلاب باستخدام قارى rfid 
-وارسال البيانات الى برنامج  مايكروسوفت اكسل 
+# Azur #ازور
 
-![alt text](https://github.com/hussamalbahadli/Azur/blob/master/assest/video.mp4)
+نظام تسجيل دخول وخروج الطلاب عن طريق قارىء البطاقات  يتصل المتحكم مع برنامج الاكسل مع اضافة بعض الدوال في برنامج الاكسل حسب احتاج النظام 
