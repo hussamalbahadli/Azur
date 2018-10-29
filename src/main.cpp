@@ -34,7 +34,7 @@ void setup()
   mfrc522.PCD_Init(); // تعريف المكتبة 
 
   //Serial.println("CLEARSHEET"); // هذا الامر يمسح البيانات في كل مرة يشتغل البرنامج 
-  Serial.println("LABEL,Date,ID,Time IN,Time OUT"); // انشاء جدول يحتوي على التاريخ و رقم الطالب و وقت الدخول و وقت الحروج 
+  Serial.println("2,LABEL,Date,ID,Time IN,Time OUT"); // انشاء جدول يحتوي على التاريخ و رقم الطالب و وقت الدخول و وقت الحروج 
    // ملاحظة اسم الطالب في برنامج الاكسل 
   pinMode(RedLed, OUTPUT); // تهيئة المنفذ خروج 5 فولت 
   pinMode(GreenLed, OUTPUT); // تهيئة المنفذ خروج 5 فولت 
