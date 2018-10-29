@@ -77,7 +77,7 @@ void loop()
     {
       digitalWrite(GreenLed, LOW);
       digitalWrite(RedLed, HIGH);
-      goto cont; //شغل ضوء احمر اذا لم تعثر على شيء 
+      
     }
   }
   if (NumbCard[j] == 1 )
@@ -111,20 +111,6 @@ void loop()
     delay(30);
     digitalWrite(Buzzer, LOW);
   }
-  else if (statu[s] == 1)
-  {
-    //شغل الضوء الاحمر اذا خرج الطالب من الصف 
-    digitalWrite(RedLed, HIGH);
-  }
-  delay(1000);
-cont:
-  delay(2000);
-  digitalWrite(GreenLed, LOW);
-  digitalWrite(RedLed, LOW);
-
-  // اوامر حفظ اختياري
-  /*if(n==2){
-    Serial.println("SAVEWORKBOOKAS,Names/WorkNames");
-    Serial.println("FORCEEXCELQUIT");
-    }*/
+  
 }
+
