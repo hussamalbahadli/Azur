@@ -4,9 +4,9 @@ write inside and outside student from the class in Microsoft excel using Arduino
 
 صور الشغل 
 
-![alt text](https://github.com/hussamalbahadli/Azur/blob/master/assets/Screenshot_1.png)
+![alt text](https://github.com/hussamalbahadli/Azur/blob/master/assets/Screenshot_4.png)
 
-![alt text](https://github.com/hussamalbahadli/Azur/blob/master/assets/Screenshot_2.png)
+
 
 صورة المتحكم والبطاقة 
 
