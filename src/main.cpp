@@ -89,6 +89,11 @@ void loop()
     Serial.print("");
     Serial.print(",");
     Serial.println("TIME");
+    digitalWrite(RedLed,HIGH);
+    digitalWrite(GreenLed,LOW);
+    digitalWrite(Buzzer,HIGH);
+    delay(30);
+    digitalWrite(Buzzer,LOW);
     
   }
   else if (NumbCard[j] == 0)
