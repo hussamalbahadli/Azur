@@ -11,10 +11,13 @@ MFRC522 mfrc522(SS_PIN, RST_PIN); // أنشاء الاتصال
 byte card_ID[4]; //حجم البطاقة هو 4 بايت 
 byte Name1[4] = {0x44, 0x1A, 0xA3, 0x39}; //البطاقة الاولى 
 byte Name2[4] = {0x72, 0x02, 0xDE, 0x24}; //البطاقة الثانية 
+byte Name3[4] = {0x8D, 0x05, 0x17, 0xD3};
+byte Name4[4] = {0xA4, 0x09, 0xA6, 0x39};
+      
 
 // ملاحظة يستخدم هذا في حالة دخول وخروج الطالب مرة واحدة فقط فهو اختياري 
-int NumbCard[2]; //عدد البطاقات . والتي هي 2 فقط 
-int statu[2]; // عدد البطاقات . والتي هي 2 ققط
+int NumbCard[4]; //عدد البطاقات . والتي هي 2 فقط 
+int statu[4]; // عدد البطاقات . والتي هي 2 ققط
 
 int s = 0; 
 int j = 0;
@@ -73,6 +76,18 @@ void loop()
       j = 1;
       s = 1;
     }
+    else if (card_ID[i] == Name3[i])
+    {
+    ID = 3; //رقم الطالب
+      j = 2;
+      s = 2;
+    }
+    else if (card_ID[i] == Name4[i])
+    {
+    ID = 4; //رقم الطالب
+      j = 3;
+      s = 3;
+    }
     else
     {
       digitalWrite(GreenLed, LOW);
@@ -113,7 +128,7 @@ void loop()
   }
   else if (statu[s] == 1)
   {
-    //شغل الضوء الاحمر اذا خرج الطالب من الصف 
+    //في حالة البطاقة غير معرفة 
     digitalWrite(RedLed, HIGH);
   }
   delay(1000);
