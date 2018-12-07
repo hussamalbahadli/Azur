@@ -1,5 +1,6 @@
 
 #include <Arduino.h> // مكتبة الاردوينو الاساسية 
+
 #include <SPI.h> // مكتبة تسمح لي بالاتصال باي جهاز يعمل على هذا البروتوكول 
 #include <MFRC522.h> // مكتبة الخاصة بال rfid reader -- rc522
 
@@ -137,4 +138,3 @@ cont:
   digitalWrite(GreenLed, LOW);
   digitalWrite(RedLed, LOW);
 }
-
