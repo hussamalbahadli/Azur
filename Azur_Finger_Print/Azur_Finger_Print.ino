@@ -28,6 +28,9 @@
 #include <SoftwareSerial.h>
 SoftwareSerial mySerial(2, 3);
 
+short NAME1 = 1 ;
+int ID ;
+
 Adafruit_Fingerprint finger = Adafruit_Fingerprint(&mySerial);
 
 void setup()  
@@ -36,6 +39,8 @@ void setup()
   while (!Serial);  // For Yun/Leo/Micro/Zero/...
   delay(100);
   Serial.println("\n\nAdafruit finger detect test");
+  delay(100);
+  Serial.println("2,LABEL,Date,ID,Time IN,Time OUT");
 
   // set the data rate for the sensor serial port
   finger.begin(57600);
@@ -56,6 +61,19 @@ void loop()                     // run over and over again
 {
   getFingerprintIDez();
   delay(50);            //don't ned to run this at full speed.
+
+  if ( finger.fingerID == NAME1 ) 
+  {
+     ID = 1;
+    Serial.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
+    Serial.print(ID);
+    Serial.print(",");
+    Serial.print("TIME");
+    Serial.print(",");
+    Serial.println("");
+    return NAME1 = 0 ;
+  }
+  
 }
 
 uint8_t getFingerprintID() {
