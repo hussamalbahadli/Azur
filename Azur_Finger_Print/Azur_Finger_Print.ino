@@ -28,8 +28,9 @@
 #include <SoftwareSerial.h>
 SoftwareSerial mySerial(2, 3);
 
-short NAME1 = 1 ;
+ int  NAME1 = 1 ;
 int ID ;
+
 
 Adafruit_Fingerprint finger = Adafruit_Fingerprint(&mySerial);
 
@@ -61,17 +62,26 @@ void loop()                     // run over and over again
 {
   getFingerprintIDez();
   delay(50);            //don't ned to run this at full speed.
+ 
 
-  if ( finger.fingerID == NAME1 ) 
+  if ( finger.fingerID == 1 &&  finger.confidence >= 180 ) 
   {
-     ID = 1;
+    ID = 1;
     Serial.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
     Serial.print(ID);
     Serial.print(",");
     Serial.print("TIME");
     Serial.print(",");
     Serial.println("");
-    return NAME1 = 0 ;
+    delay(10);
+   // return 0;
+    
+  }
+
+  else 
+  {
+   Serial.println("ERRE"); 
+   delay(100);
   }
   
 }
@@ -158,3 +168,5 @@ int getFingerprintIDez() {
   Serial.print(" with confidence of "); Serial.println(finger.confidence);
   return finger.fingerID; 
 }
+
+
