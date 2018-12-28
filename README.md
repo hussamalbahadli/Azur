@@ -4,7 +4,7 @@
 
 
 ## البصمة 
-![https://github.com/hussamalbahadli/Azur/blob/master/assets/image/s4.jpg
+![Gentelella Bootstrap Admin Template](https://github.com/hussamalbahadli/Azur/blob/master/assets/image/s4.jpg
 "البصمة ذاكرة 127 بصمة اصبع تاخذ ")
 
 ادخل على الموقع لمعرفه اكثر عن المشروع
