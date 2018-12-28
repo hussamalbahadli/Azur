@@ -7,6 +7,20 @@
 ![البصمة](https://github.com/hussamalbahadli/Azur/blob/master/assets/image/Fingerprint.jpg
 "البصمة ذاكرة 127 بصمة اصبع تاخذ ")
 
-ادخل على الموقع لمعرفه اكثر عن المشروع
+
+
+## قارى البطاقات  
+![قارى البطاقات](https://github.com/hussamalbahadli/Azur/blob/master/assets/image/rfid.jpg
+"قارى البطاقات ")
+
+
+
+##  لوحة بورد اردوينو   
+![  لوحة بورد اردوينو  ](https://github.com/hussamalbahadli/Azur/blob/master/assets/image/arduino.jpg
+"  لوحة بورد اردوينو " )
+
+
+
+الموقع الالكتروني 
 
 https://hussamalbahadli.github.io/Azur/
