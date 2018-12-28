@@ -28,8 +28,9 @@
 #include <SoftwareSerial.h>
 SoftwareSerial mySerial(2, 3);
 
- int  NAME1 = 1 ;
+ 
 int ID ;
+int led = 13;
 
 
 Adafruit_Fingerprint finger = Adafruit_Fingerprint(&mySerial);
@@ -42,6 +43,7 @@ void setup()
   Serial.println("\n\nAdafruit finger detect test");
   delay(100);
   Serial.println("2,LABEL,Date,ID,Time IN,Time OUT");
+  pinMode(led,OUTPUT);
 
   // set the data rate for the sensor serial port
   finger.begin(57600);
@@ -58,14 +60,21 @@ void setup()
   Serial.println("Waiting for valid finger...");
 }
 
+ void zero ()
+ {
+  finger.fingerID = 0 ;
+ }
+
 void loop()                     // run over and over again
 {
   getFingerprintIDez();
   delay(50);            //don't ned to run this at full speed.
- 
 
-  if ( finger.fingerID == 1 &&  finger.confidence >= 180 ) 
+ // finger.confidence >= 150
+
+  if ( finger.fingerID == 1 && finger.confidence >= 60 ) 
   {
+    
     ID = 1;
     Serial.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
     Serial.print(ID);
@@ -73,16 +82,196 @@ void loop()                     // run over and over again
     Serial.print("TIME");
     Serial.print(",");
     Serial.println("");
-    delay(10);
-   // return 0;
+    //ID =0;
+    digitalWrite(led,HIGH);
+    delay(500);
+    zero();
+    //return finger.fingerID = 0;
     
   }
 
+  if ( finger.fingerID == 2 && finger.confidence >= 50 ) 
+  {
+    ID = 2;
+    Serial.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
+    Serial.print(ID);
+    Serial.print(",");
+    Serial.print("TIME");
+    Serial.print(",");
+    Serial.println("");
+    //ID =0;
+    delay(10);
+    zero();
+    //return finger.fingerID = 0;
+    
+  }
+ if ( finger.fingerID == 3 && finger.confidence >= 50 ) 
+  {
+    ID = 3;
+    Serial.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
+    Serial.print(ID);
+    Serial.print(",");
+    Serial.print("TIME");
+    Serial.print(",");
+    Serial.println("");
+    //ID =0;
+    delay(10);
+    zero();
+    //return finger.fingerID = 0;
+    
+  }
+
+  if ( finger.fingerID == 4 && finger.confidence >= 80 ) 
+  {
+    ID = 4;
+    Serial.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
+    Serial.print(ID);
+    Serial.print(",");
+    Serial.print("TIME");
+    Serial.print(",");
+    Serial.println("");
+    //ID =0;
+    delay(10);
+    zero();
+    //return finger.fingerID = 0;
+    
+  }
+
+    if ( finger.fingerID == 5 && finger.confidence >= 70 ) 
+  {
+    ID = 5;
+    Serial.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
+    Serial.print(ID);
+    Serial.print(",");
+    Serial.print("TIME");
+    Serial.print(",");
+    Serial.println("");
+    //ID =0;
+    delay(10);
+    zero();
+    //return finger.fingerID = 0;
+    
+  }
+
+    if ( finger.fingerID == 6 && finger.confidence >= 100 ) 
+  {
+    ID = 6;
+    Serial.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
+    Serial.print(ID);
+    Serial.print(",");
+    Serial.print("TIME");
+    Serial.print(",");
+    Serial.println("");
+    //ID =0;
+    delay(10);
+    zero();
+    //return finger.fingerID = 0;
+    
+  }
+
+    if ( finger.fingerID == 7 && finger.confidence >= 75 ) 
+  {
+    ID = 7;
+    Serial.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
+    Serial.print(ID);
+    Serial.print(",");
+    Serial.print("TIME");
+    Serial.print(",");
+    Serial.println("");
+    //ID =0;
+    delay(10);
+    zero();
+    //return finger.fingerID = 0;
+    
+  }
+
+    if ( finger.fingerID == 8 && finger.confidence >= 70 ) 
+  {
+    ID = 8;
+    Serial.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
+    Serial.print(ID);
+    Serial.print(",");
+    Serial.print("TIME");
+    Serial.print(",");
+    Serial.println("");
+    //ID =0;
+    delay(10);
+    zero();
+    //return finger.fingerID = 0;
+    
+  }
+
+    if ( finger.fingerID == 9 && finger.confidence >= 70 ) 
+  {
+    ID = 9;
+    Serial.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
+    Serial.print(ID);
+    Serial.print(",");
+    Serial.print("TIME");
+    Serial.print(",");
+    Serial.println("");
+    //ID =0;
+    delay(10);
+    zero();
+    //return finger.fingerID = 0;
+    
+  }
+
+    if ( finger.fingerID == 10 && finger.confidence >= 70 ) 
+  {
+    ID = 10;
+    Serial.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
+    Serial.print(ID);
+    Serial.print(",");
+    Serial.print("TIME");
+    Serial.print(",");
+    Serial.println("");
+    //ID =0;
+    delay(10);
+    zero();
+    //return finger.fingerID = 0;
+    
+  }
+
+    if ( finger.fingerID == 11 && finger.confidence >= 70 ) 
+  {
+    ID = 11;
+    Serial.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
+    Serial.print(ID);
+    Serial.print(",");
+    Serial.print("TIME");
+    Serial.print(",");
+    Serial.println("");
+    //ID =0;
+    delay(10);
+    zero();
+    //return finger.fingerID = 0;
+    
+  }
+
+     if ( finger.fingerID == 24 && finger.confidence >= 70 ) 
+  {
+    ID = 24;
+    Serial.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
+    Serial.print(ID);
+    Serial.print(",");
+    Serial.print("TIME");
+    Serial.print(",");
+    Serial.println("");
+    //ID =0;
+    delay(10);
+    zero();
+    //return finger.fingerID = 0;
+    
+  }
+  
   else 
   {
-   Serial.println("ERRE"); 
+   Serial.println("NO Finger Print ! "); 
    delay(100);
+   digitalWrite(led,LOW);
   }
+
   
 }
 
