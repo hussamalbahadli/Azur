@@ -28,3 +28,8 @@
 الموقع الالكتروني 
 
 https://hussamalbahadli.github.io/Azur/
+
+گروب على التليكرام 
+فقط ابحث عن هذا الاسم وستجد المجموعة 
+
+@azure_the_owl
