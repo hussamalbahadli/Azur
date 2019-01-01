@@ -3,10 +3,9 @@
 غيابات الطلاب 
 
 
-## البصمة 
-![البصمة](https://github.com/hussamalbahadli/Azur/blob/master/assets/image/Fingerprint.jpg
-"البصمة ذاكرة 127 بصمة اصبع تاخذ ")
-
+## واجهة المشروع  
+![  واجهة المشروع  ](https://github.com/hussamalbahadli/Azur/blob/master/assets/image/s4.jpg
+"  واجهة المشروع " )
 
 
 ## قارى البطاقات  
@@ -20,9 +19,10 @@
 "  لوحة بورد اردوينو " )
 
 
-## واجهة المشروع  
-![  واجهة المشروع  ](https://github.com/hussamalbahadli/Azur/blob/master/assets/image/s4.jpg
-"  واجهة المشروع " )
+
+## البصمة 
+![البصمة](https://github.com/hussamalbahadli/Azur/blob/master/assets/image/Fingerprint.jpg
+"البصمة ذاكرة 127 بصمة اصبع تاخذ ")
 
 
 الموقع الالكتروني 
