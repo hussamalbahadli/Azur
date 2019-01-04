@@ -24,7 +24,9 @@
 ![البصمة](https://github.com/hussamalbahadli/Azur/blob/master/assets/image/Fingerprint.jpg
 "البصمة ذاكرة 127 بصمة اصبع تاخذ ")
 
-
+## ماجول واير ليز 
+![وايرليز](https://github.com/hussamalbahadli/Azur/blob/master/assets/image/hc12.jpg
+"ماجول واير ليز ")
 الموقع الالكتروني 
 
 https://hussamalbahadli.github.io/Azur/
