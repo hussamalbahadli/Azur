@@ -1,41 +1,27 @@
-/*************************************************** 
-  This is an example sketch for our optical Fingerprint sensor
-
-  Designed specifically to work with the Adafruit BMP085 Breakout 
-  ----> http://www.adafruit.com/products/751
-
-  These displays use TTL Serial to communicate, 2 pins are required to 
-  interface
-  Adafruit invests time and resources providing this open source code, 
-  please support Adafruit and open-source hardware by purchasing 
-  products from Adafruit!
-
-  Written by Limor Fried/Ladyada for Adafruit Industries.  
-  BSD license, all text above must be included in any redistribution
- ****************************************************/
-
+#include <Arduino.h>
 
 #include <Adafruit_Fingerprint.h>
 
-// On Leonardo/Micro or others with hardware serial, use those! #0 is green wire, #1 is white
-// uncomment this line:
-// #define mySerial Serial1
-
-// For UNO and others without hardware serial, we must use software serial...
-// pin #2 is IN from sensor (GREEN wire)
-// pin #3 is OUT from arduino  (WHITE wire)
-// comment these two lines if using hardware serial
 #include <SoftwareSerial.h>
+
 SoftwareSerial mySerial(2, 3);
+
+ 
+int ID ;
+int led = 13;
+
 
 Adafruit_Fingerprint finger = Adafruit_Fingerprint(&mySerial);
 
 void setup()  
 {
   Serial.begin(9600);
-  while (!Serial);  // For Yun/Leo/Micro/Zero/...
+  //while (!Serial);  // For Yun/Leo/Micro/Zero/...
   delay(100);
   Serial.println("\n\nAdafruit finger detect test");
+  delay(100);
+  Serial.println("2,LABEL,Date,ID,Time IN,Time OUT");
+  pinMode(led,OUTPUT);
 
   // set the data rate for the sensor serial port
   finger.begin(57600);
@@ -52,13 +38,12 @@ void setup()
   Serial.println("Waiting for valid finger...");
 }
 
-void loop()                     // run over and over again
-{
-  getFingerprintIDez();
-  delay(50);            //don't ned to run this at full speed.
-}
+ void zero ()
+ {
+  finger.fingerID = 0 ;
+ }
 
-uint8_t getFingerprintID() {
+ uint8_t getFingerprintID() {
   uint8_t p = finger.getImage();
   switch (p) {
     case FINGERPRINT_OK:
@@ -140,3 +125,55 @@ int getFingerprintIDez() {
   Serial.print(" with confidence of "); Serial.println(finger.confidence);
   return finger.fingerID; 
 }
+
+void loop()                     
+{
+  getFingerprintIDez();
+  delay(50);            //don't ned to run this at full speed.
+
+
+  if ( finger.fingerID == 1 && finger.confidence >= 60 ) 
+  {
+    
+    ID = 1;
+    Serial.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
+    Serial.print(ID);
+    Serial.print(",");
+    Serial.print("TIME");
+    Serial.print(",");
+    Serial.println("");
+    digitalWrite(led,HIGH);
+    delay(500);
+    zero();
+    
+  }
+
+  if ( finger.fingerID == 2 && finger.confidence >= 50 ) 
+  {
+    ID = 2;
+    Serial.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
+    Serial.print(ID);
+    Serial.print(",");
+    Serial.print("TIME");
+    Serial.print(",");
+    Serial.println("");
+    digitalWrite(led,HIGH);
+    delay(500);
+    zero();
+    
+    
+  }
+
+  else 
+  {
+   Serial.println("NO Finger Print ! "); 
+   delay(100);
+   digitalWrite(led,LOW);
+  }
+
+  
+}
+
+
+
+
