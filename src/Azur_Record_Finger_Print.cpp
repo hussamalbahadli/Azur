@@ -1,3 +1,5 @@
+/*
+
 #include <Arduino.h>
 
 #include <Adafruit_Fingerprint.h>
@@ -193,3 +195,4 @@ void loop()                     // run over and over again
   while (!  getFingerprintEnroll() );
 }
 
+*/

@@ -1,4 +1,4 @@
-
+/*
 
 #include <Adafruit_Fingerprint.h>
 #include <SoftwareSerial.h>
@@ -72,3 +72,4 @@ void loop()                     // run over and over again
   deleteFingerprint(id);
 }
 
+*/
