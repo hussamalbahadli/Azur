@@ -16,7 +16,7 @@ SoftwareSerial mySerial(2, 3);
 SoftwareSerial HC12(9, 10); // HC-12 TX Pin, HC-12 RX Pin
  
 int ID ;
-int led = 8;
+int Buzzer = 8;
 
 
 Adafruit_Fingerprint finger = Adafruit_Fingerprint(&mySerial);
@@ -31,8 +31,8 @@ void setup()
   Serial.println("\n\nAdafruit finger detect test");
   delay(100);
   Serial.println("2,LABEL,Date,ID,Time IN,Time OUT");
-  pinMode(led,OUTPUT);
-  digitalWrite(led,LOW);
+  pinMode(Buzzer,OUTPUT);
+  digitalWrite(Buzzer,LOW);
 
   // set the data rate for the sensor serial port
   finger.begin(57600);
@@ -155,7 +155,7 @@ void loop()
     HC12.print("TIME");
     HC12.print(",");
     HC12.println("");
-    digitalWrite(led,HIGH);
+    digitalWrite(Buzzer,HIGH);
     delay(500);
     zero();
     
@@ -170,7 +170,7 @@ void loop()
     HC12.print("TIME");
     HC12.print(",");
     HC12.println("");
-    digitalWrite(led,HIGH);
+    digitalWrite(Buzzer,HIGH);
     delay(500);
     zero();
     
@@ -186,7 +186,7 @@ void loop()
     HC12.print("TIME");
     HC12.print(",");
     HC12.println("");
-    digitalWrite(led,HIGH);
+    digitalWrite(Buzzer,HIGH);
     delay(500);
     zero();
     
@@ -197,7 +197,7 @@ void loop()
   {
    Serial.println("NO Finger Print ! "); 
    delay(100);
-   digitalWrite(led,LOW);
+   digitalWrite(Buzzer,LOW);
   }
 
   
