@@ -4,28 +4,28 @@
 
 
 ## واجهة المشروع  
-![  واجهة المشروع  ](https://github.com/hussamalbahadli/Azur/blob/master/assets/image/s4.jpg
+![  واجهة المشروع  ](https://github.com/hussamalbahadli/Azur/blob/Azur-Fingerprint/assets/image/s4.jpg
 "  واجهة المشروع " )
 
 
 ## قارى البطاقات  
-![قارى البطاقات](https://github.com/hussamalbahadli/Azur/blob/master/assets/image/rfid.jpg
+![قارى البطاقات](https://github.com/hussamalbahadli/Azur/blob/Azur-Fingerprint/assets/image/rfid.jpg
 "قارى البطاقات ")
 
 
 
 ##  لوحة بورد اردوينو   
-![  لوحة بورد اردوينو  ](https://github.com/hussamalbahadli/Azur/blob/master/assets/image/arduino.jpg
+![  لوحة بورد اردوينو  ](https://github.com/hussamalbahadli/Azur/blob/Azur-Fingerprint/assets/image/arduino.jpg
 "  لوحة بورد اردوينو " )
 
 
 
 ## البصمة 
-![البصمة](https://github.com/hussamalbahadli/Azur/blob/master/assets/image/Fingerprint.jpg
+![البصمة](https://github.com/hussamalbahadli/Azur/blob/Azur-Fingerprint/assets/image/Fingerprint.jpg
 "البصمة ذاكرة 127 بصمة اصبع تاخذ ")
 
 ## ماجول واير ليز 
-![وايرليز](https://github.com/hussamalbahadli/Azur/blob/master/assets/image/hc12.jpg
+![وايرليز](https://github.com/hussamalbahadli/Azur/blob/Azur-Fingerprint/assets/image/hc12.jpg
 "ماجول واير ليز ")
 الموقع الالكتروني 
 
