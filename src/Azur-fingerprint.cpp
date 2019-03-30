@@ -6,11 +6,17 @@
 
 #include <SoftwareSerial.h>
 
-SoftwareSerial mySerial(2, 3);
+#include <SPI.h>
 
  
+
+SoftwareSerial mySerial(2, 3);
+
+
+SoftwareSerial HC12(9, 10); // HC-12 TX Pin, HC-12 RX Pin
+ 
 int ID ;
-int led = 13;
+int led = 8;
 
 
 Adafruit_Fingerprint finger = Adafruit_Fingerprint(&mySerial);
@@ -18,12 +24,15 @@ Adafruit_Fingerprint finger = Adafruit_Fingerprint(&mySerial);
 void setup()  
 {
   Serial.begin(9600);
+  HC12.begin(9600);
+  SPI.begin();
   //while (!Serial);  // For Yun/Leo/Micro/Zero/...
   delay(100);
   Serial.println("\n\nAdafruit finger detect test");
   delay(100);
   Serial.println("2,LABEL,Date,ID,Time IN,Time OUT");
   pinMode(led,OUTPUT);
+  digitalWrite(led,LOW);
 
   // set the data rate for the sensor serial port
   finger.begin(57600);
@@ -38,6 +47,8 @@ void setup()
   finger.getTemplateCount();
   Serial.print("Sensor contains "); Serial.print(finger.templateCount); Serial.println(" templates");
   Serial.println("Waiting for valid finger...");
+
+  HC12.println("2,LABEL,Date,ID,Time IN,Time OUT"); 
 }
 
  void zero ()
@@ -138,12 +149,12 @@ void loop()
   {
     
     ID = 1;
-    Serial.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
-    Serial.print(ID);
-    Serial.print(",");
-    Serial.print("TIME");
-    Serial.print(",");
-    Serial.println("");
+    HC12.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
+    HC12.print(ID);
+    HC12.print(",");
+    HC12.print("TIME");
+    HC12.print(",");
+    HC12.println("");
     digitalWrite(led,HIGH);
     delay(500);
     zero();
@@ -153,12 +164,28 @@ void loop()
   if ( finger.fingerID == 2 && finger.confidence >= 50 ) 
   {
     ID = 2;
-    Serial.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
-    Serial.print(ID);
-    Serial.print(",");
-    Serial.print("TIME");
-    Serial.print(",");
-    Serial.println("");
+    HC12.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
+    HC12.print(ID);
+    HC12.print(",");
+    HC12.print("TIME");
+    HC12.print(",");
+    HC12.println("");
+    digitalWrite(led,HIGH);
+    delay(500);
+    zero();
+    
+    
+  }
+
+   if ( finger.fingerID == 3 && finger.confidence >= 50 ) 
+  {
+    ID = 3;
+    HC12.print("DATA,DATE,"); //ارسل البيانات الى برنامج الاكسل
+    HC12.print(ID);
+    HC12.print(",");
+    HC12.print("TIME");
+    HC12.print(",");
+    HC12.println("");
     digitalWrite(led,HIGH);
     delay(500);
     zero();
@@ -175,5 +202,4 @@ void loop()
 
   
 }
-
 
