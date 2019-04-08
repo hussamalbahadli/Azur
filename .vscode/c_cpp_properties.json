@@ -2,10 +2,7 @@
     "configurations": [
         {
             "name": "!!! WARNING !!! AUTO-GENERATED FILE, PLEASE DO NOT MODIFY IT AND USE https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags",
-            "intelliSenseMode": "msvc-x64",
-            "compilerPath": "C:\\MinGW\\bin\\gcc.exe",
-            "cStandard": "c11",
-            "cppStandard": "c++17"
+            "intelliSenseMode": "msvc-x64"
         },
         {
             "name": "Win32",
@@ -13,12 +10,12 @@
                 "C:/Users/hussam/.platformio/packages/framework-arduinoavr/cores/arduino",
                 "C:/Users/hussam/.platformio/packages/framework-arduinoavr/variants/standard",
                 "c:/Users/hussam/Azur/.piolibdeps/Adafruit Fingerprint Sensor Library_ID382",
-                "C:/Users/hussam/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src",
-                "C:/Users/hussam/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SoftwareSerial/src",
                 "C:/Users/hussam/.platformio/lib/Adafruit Fingerprint Sensor Library_ID382",
                 "C:/Users/hussam/.platformio/lib/HC-12_ID5459",
                 "C:/Users/hussam/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src",
                 "C:/Users/hussam/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/HID/src",
+                "C:/Users/hussam/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src",
+                "C:/Users/hussam/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SoftwareSerial/src",
                 "C:/Users/hussam/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src",
                 "C:/Users/hussam/.platformio/packages/tool-unity",
                 "c:/Users/hussam/Azur/include",
@@ -32,12 +29,12 @@
                     "C:/Users/hussam/.platformio/packages/framework-arduinoavr/cores/arduino",
                     "C:/Users/hussam/.platformio/packages/framework-arduinoavr/variants/standard",
                     "c:/Users/hussam/Azur/.piolibdeps/Adafruit Fingerprint Sensor Library_ID382",
-                    "C:/Users/hussam/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src",
-                    "C:/Users/hussam/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SoftwareSerial/src",
                     "C:/Users/hussam/.platformio/lib/Adafruit Fingerprint Sensor Library_ID382",
                     "C:/Users/hussam/.platformio/lib/HC-12_ID5459",
                     "C:/Users/hussam/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src",
                     "C:/Users/hussam/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/HID/src",
+                    "C:/Users/hussam/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src",
+                    "C:/Users/hussam/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SoftwareSerial/src",
                     "C:/Users/hussam/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src",
                     "C:/Users/hussam/.platformio/packages/tool-unity",
                     "c:/Users/hussam/Azur/include",
